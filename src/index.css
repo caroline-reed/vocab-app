@@ -1,13 +1,331 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  width: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: auto;
+
+}
+
+
+p {
+  font-size: 110%;
+  /* margin: 2% 0; */
+}
+
+/* img {
+  max-width: 100%;
+} */
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+a {
+  /* color: black; */
+  /* text-decoration: none; */
+}
+
+
+.container {
+  max-width: 100%;
+}
+
+/* <a href='https://www.freepik.com/vectors/taxi-cab'>
+Taxi cab vector created by pch.vector - www.freepik.com</a> */
+/* <a href='https://www.freepik.com/vectors/street'>
+Street vector created by upklyak - www.freepik.com</a> */
+
+#wordAppPage {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5rem;
+  color: white;
+  background-color: black;
+  z-index: 3;
+  display: block;
+}
+
+#wordAppPage h1 {
+  font-size: 1px;
+  visibility: hidden;
+  /* text-align: center;
+  font-size: 170%; */
+  /* font-weight: normal; */
+}
+
+
+#wordAppPage #aboutWordApp {
+  position: absolute;
+  top: 20vh;
+  right: 5vw;
+  width: 45vw;
+  height: 75vh;
+  padding: 0 0 0 4.5rem;
+  color: white;
+  z-index: 3;
+  display: block;
+  /* border: thin solid lime; */
+}
+
+
+#wordAppPage #aboutWordApp h3 {
+  text-align: center;
+  font-size: 150%;
+  margin: 0;
+  padding: 1rem 0 0.25rem;
+}
+
+#wordAppPage #aboutWordApp #appDefine p {
+  font-size: 115%;
+  text-align: left;
+  padding: 2rem 2.5rem 0.25rem 5rem;
+
+}
+
+
+#wordAppPage #aboutWordApp #appSpecs h4 {
+  text-align: center;
+  font-size: 130%;
+  padding: 5rem 2.5rem 1rem;
+}
+
+
+#wordAppPage #aboutWordApp #appSpecs ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+
+#wordAppPage #aboutWordApp #appSpecs ul li {
+  display: inline;
+  font-size: 130%;
+  padding: 0.1rem 1.5rem;
+  list-style-type: none;
+}
+
+
+/*formatting for word app*/
+#wordApp {
+  position: absolute;
+  top: 20vh;
+  left: 5vw;
+  width: 45vw;
+  height: 75vh;
+  padding: 0;
+  color: black;
+  z-index: 3;
+  display: block;
+  /* border: thin solid lime; */
+}
+
+
+#wordApp #wordAppHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(135, 206, 235, 1);
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  border-bottom: thin inset skyblue;
+  border-radius: 1rem 1rem 0 0;
+  z-index: 10;
+}
+
+
+/* #wordApp #wordAppTitleBar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(135, 206, 235, 1);
+  width: 100%;
+  height: 5vh;
+  padding: 2rem;
+  border-bottom: thin inset skyblue;
+  border-radius: 1rem 1rem 0 0;
+  z-index: 10;
+} */
+
+
+#wordAppTitle {
+  z-index: 10;
+  padding: 0;
+}
+
+
+#wordAppTitle h2 {
+  /* border: thin solid green; */
+  font-size: 240%;
+  font-weight: normal;
+  margin: 0 0 0.5rem;
+  filter: drop-shadow(0.1rem 0.1rem 0.1rem dimgray);
+  /* line-height: 1.5; */
+}
+
+
+#wordAppTitle h3 {
+  font-weight: 400;
+  font-size: 140%;
+}
+
+
+#wordAppNav {
+  display: flex;
+  z-index: 10;
+  padding: 3vh 0 0;
+}
+
+
+#wordAppNav button {
+  font-size: 170%;
+  font-weight: 400;
+  margin: 0 0 0 0.5rem;
+  padding: 0 0.85rem;
+  height: 2.5rem;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  border: 0.1rem outset white;
+  border-radius: 0.25rem;
+  filter: drop-shadow(0.1rem 0.1rem 0.1rem black);
+  z-index: 10;
+  cursor: pointer;
+}
+
+
+#displayWord {
+  position: relative;
+  font-size: 150%;
+  background-color: lightblue;
+  color: black;
+  width: 100%;
+  height: auto;
+  padding: 5rem 2.5rem 2.5rem;
+  border-radius: 0 0 1rem 1rem;
+
+  z-index: 2;
+}
+
+
+#loadPage {
+  font-size: 160%;
+  text-align: center;
+  color: black;
+  width: 45vw;
+  height: 30vh;
+  margin: 2.5vh 0;
+  padding: 10vh 0 0;
+  background-color: white;
+  border: medium solid aliceblue;
+  border-radius: 1rem;
+  z-index: 6;
+}
+
+
+#displayWord .pageTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+}
+
+#displayWord .pageTitle h4 {
+  font-size: 110%;
+  font-weight: 500;
+  /* text-align: center; */
+  margin: 0;
+  padding: 0;
+}
+
+
+#displayWord #date_today {
+  text-align: left;
+  font-size: 100%;
+  font-weight: 500;
+  color: rgba(80, 80, 80, 1);
+}
+
+#displayWord p {
+  margin: 0;
+  padding: 1.5% 0;
+  font-size: 100%;
+}
+
+#displayWord .example {
+  padding: 2% 0;
+}
+
+#displayWord a {
+  color: black;
+  font-size: 100%;
+}
+
+#displayWord audio {
+  margin: 0 3%;
+  width: auto;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: lightsteelblue;
+  filter: brightness(150%) drop-shadow(0.1rem 0.1rem 0.1rem dimgray);
+}
+
+
+#windowDaily {
+  display: none;
+  width: 100%;
+  height: 95%;
+  padding: 0 0 5% 0;
+}
+
+#windowSearch {
+  display: none;
+  width: 100%;
+  height: 95%;
+  padding: 0 0 5% 0;
+}
+
+/* #windowSearch form {
+  margin: 0;
+  padding: 1.5% 0;
+} */
+
+/* #window_word_search #search_result {
+  display: none;
+} */
+
+#windowRandom {
+  display: none;
+  width: 100%;
+  height: 95%;
+  padding: 0 0 5% 0;
+}
+
+
+#wordApp #apiCred {
+  position: relative;
+  font-family: monospace;
+  text-align: center;
+  font-size: 100%;
 }
